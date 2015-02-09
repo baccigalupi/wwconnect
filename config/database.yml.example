@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: wwconnect_development
+
+test:
+  <<: *default
+  database: wwconnect_test
+
+production:
+  <<: *default
+  database: wwconnect_production
