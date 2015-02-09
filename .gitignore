@@ -2,3 +2,5 @@ log/*.log
 
 config/database.yml
 config/secrets.yml
+
+tmp/
