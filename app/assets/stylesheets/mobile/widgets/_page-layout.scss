@@ -1,0 +1,10 @@
+body {
+  background-color: $neutral-60;
+}
+
+#page {
+  @include line;
+  width: 100%;
+  background-color: $lightest-color;
+  @include box-shadow($darkest-color 0 0 $spacing*2);
+}

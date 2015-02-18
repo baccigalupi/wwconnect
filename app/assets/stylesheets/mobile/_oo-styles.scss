@@ -1,0 +1,218 @@
+.block {
+  @include line;
+}
+
+.hidden {
+  display: none;
+}
+
+.overflow {
+  overflow: visible;
+}
+
+.no-overflow, .no-scroll {
+  overflow: hidden;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+
+
+.inner-top {
+  padding-top: $spacing;
+}
+
+.inner-bottom {
+  padding-bottom: $spacing;
+}
+
+.inner-left {
+  padding-left: $spacing;
+}
+
+.inner-right {
+  padding-right: $spacing;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+
+
+.pointer-cursor {
+  cursor: pointer;
+}
+
+
+.rounded {
+  @include rounded;
+}
+
+.circular {
+  @include border-radius(50%);
+}
+
+
+
+.centered-content {
+  text-align: center;
+}
+
+.centerable {
+  display: inline-block;
+}
+
+
+
+.shadow-container {
+  @include line;
+  padding-right: $shadow-padding;
+  padding-bottom: $shadow-padding;
+}
+
+.shadow {
+  @include shadowed;
+}
+
+.transparent {
+  @include opacity(0);
+}
+
+.opaque {
+  @include opacity(1);
+}
+
+.border {
+  @include bordered;
+}
+
+.border-left {
+  border-left: $border-width solid $neutral-20;
+}
+
+.border-right {
+  border-right: $border-width solid $neutral-20;
+}
+
+.border-top {
+  border-top: $border-width solid $neutral-20;
+}
+
+.border-bottom {
+  border-bottom: $border-width solid $neutral-20;
+}
+
+.no-border {
+  border: none;
+}
+
+
+
+// text styles
+
+.wrap {
+  @include word-break(break-all);
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.small-text {
+  font-size: 0.9*$em;
+}
+
+.text-shadow {
+  @include text-shadowed;
+}
+
+.text-shadow-light {
+  @include text-shadowed-light;
+}
+
+// colored text
+
+.light-text {
+  color: $neutral-20;
+}
+
+.primary-text {
+  color: $primary;
+}
+
+.accent-text {
+  color: $accent;
+}
+
+.accent-2-text {
+  color: $accent-2;
+}
+
+.info-text {
+  color: $info;
+}
+
+.info-2-text {
+  color: $info-2;
+}
+
+.warn-text {
+  color: $warn;
+}
+
+.error-text {
+  color: $error-dark;
+}
+
+
+// colored backgrounds
+.background-light {
+  background-color: $lightest-color;
+}
+
+.background-dark {
+  background-color: $darkest-color;
+}
+
+.background-primary {
+  background-color: $primary;
+}
+
+.background-accent {
+  background-color: $accent;
+}
+
+.background-accent-2 {
+  background-color: $accent-2;
+}
+
+.background-info {
+  background-color: $info;
+}
+
+.background-info-2 {
+  background-color: $info-2;
+}
+
+.background-warn {
+  background-color: $warn;
+}
+
+.background-error {
+  background-color: $error;
+}

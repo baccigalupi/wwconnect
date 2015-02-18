@@ -1,0 +1,15 @@
+button,
+input[type=submit],
+a.button,
+div.button,
+label.button {
+  font-size: $em;
+}
+
+.input,
+input[type=text],
+input[type=password],
+input[type=email],
+textarea {
+  font-size: $em;
+}

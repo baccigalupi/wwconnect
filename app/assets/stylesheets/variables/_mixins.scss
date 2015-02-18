@@ -1,0 +1,45 @@
+@mixin line {
+  display: block;
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1;
+}
+
+@mixin bordered {
+  border: $border-width solid $neutral-20;
+}
+
+@mixin rounded {
+  @include border-radius($border-radius-size);
+}
+
+@mixin shadowed {
+  @include box-shadow(transparentize($darkest-color, 0.3) $shadow-padding/2 $shadow-padding/2 $shadow-padding);
+}
+
+@mixin depressed-shadow {
+  @include box-shadow(inset transparentize($darkest-color, 0.3) $shadow-padding/2 $shadow-padding/2 $shadow-padding);
+}
+
+@mixin text-shadowed {
+  @include text-shadow(transparentize($darkest-color, 0.3) 1px 1px 1px);
+}
+
+@mixin text-shadowed-light {
+  @include text-shadow(1px 1px 0px $lightest-color);
+}
+
+@mixin opacity-transition {
+  @include transition-property(opacity);
+  @include transition-duration(500ms);
+}
+
+/* form input fixes */
+@mixin focus-input-padding-fix {
+  padding: $input-top-padding - $input-border-width $input-side-padding - $input-border-width;
+}
+
+@mixin input-margin-fix {
+  margin-left: -$input-side-padding;
+  margin-top: -$input-top-padding;
+}

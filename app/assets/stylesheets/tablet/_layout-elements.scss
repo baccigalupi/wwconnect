@@ -1,0 +1,26 @@
+#page {
+  max-width: $tablet-break-point - $spacing*2;
+  margin: 0 auto;
+  @include box-shadow($darkest-color 0 0 $spacing*2)
+}
+
+#header {
+  height: 160px;
+
+  .logo {
+    height: 86px;
+
+    h1 {
+      font-size: 86px;
+
+      &.connect {
+        left: 190px;
+      }
+    }
+  }
+}
+
+
+.dialog-container {
+  width: 50%;
+}

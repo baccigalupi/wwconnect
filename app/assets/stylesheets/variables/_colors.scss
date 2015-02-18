@@ -1,0 +1,43 @@
+$lightest-color: #fff;
+$darkest-color: #333;
+
+// Shades of gray
+$neutral-90: mix($lightest-color, $darkest-color, 10%);
+$neutral-80: mix($lightest-color, $darkest-color, 20%);
+$neutral-70: mix($lightest-color, $darkest-color, 30%);
+$neutral-60: mix($lightest-color, $darkest-color, 40%);
+$neutral-50: mix($lightest-color, $darkest-color, 50%);
+$neutral-40: mix($lightest-color, $darkest-color, 60%);
+$neutral-30: mix($lightest-color, $darkest-color, 70%);
+$neutral-20: mix($lightest-color, $darkest-color, 80%);
+$neutral-10: mix($lightest-color, $darkest-color, 90%);
+
+// Theme based color
+$primary:        rgb(0, 109, 101);
+$primary-light:  lighten($primary, 5%);
+$primary-dark:   darken($primary, 5%);
+
+$accent:         rgb(174, 0, 9);
+$accent-light:   lighten($accent, 10%);
+$accent-dark:    darken($accent, 10%);
+
+$accent-2:         rgb(227, 149, 0);
+$accent-2-light:   lighten($accent-2, 5%);
+$accent-2-dark:    darken($accent-2, 5%);
+
+// Semantic colors;
+$info:          darken($primary, 30%);
+$info-light:    lighten($info, 5%);
+$info-dark:     darken($info, 5%);
+
+$info-2:        darken($accent, 10%);
+$info-2-light:  lighten($info-2, 5%);
+$info-2-dark:   darken($info-2, 5%);
+
+$warn:          darken($accent-2, 20%);
+$warn-light:    lighten($warn, 5%);
+$warn-dark:     darken($warn, 5%);
+
+$error:         rgb(252, 0, 13);
+$error-light:   lighten($error, 5%);
+$error-dark:    darken($error, 5%);

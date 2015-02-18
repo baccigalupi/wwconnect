@@ -1,0 +1,20 @@
+/* This is the main CSS base class. Import it into HTML via:
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+*/
+
+@import "compass/reset";
+@import "compass/css3";
+@import "shipd-variables";
+
+@import "mobile/grid";
+@import "mobile/typography";
+
+// below this line is optional
+@import "mobile/oo-styles"; // for brevity, pick and choose your styles
+
+@import "mobile/widgets/form-elements";
+@import "mobile/widgets/buttons";
+@import "mobile/widgets/page-layout";
+@import "mobile/widgets/header";
+@import "mobile/widgets/dialog-overlay";
+@import "mobile/widgets/carousel";

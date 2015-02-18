@@ -1,0 +1,24 @@
+#page {
+  max-width: $desktop-break-point + 64px; // gets this to 1024 even though breakpoint is smaller
+  @include box-shadow($darkest-color 0 0 $spacing*2);
+}
+
+#header {
+  .inner {
+    padding: 10px;
+  }
+
+  height: 160px;
+
+  .logo {
+    height: 100px;
+
+    h1 {
+      font-size: 100px;
+
+      &.connect {
+        left: 220px;
+      }
+    }
+  }
+}

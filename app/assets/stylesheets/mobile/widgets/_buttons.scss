@@ -1,0 +1,134 @@
+button,
+input[type=submit] {
+  @include line;
+}
+
+button,
+input[type=submit],
+a.button,
+div.button,
+label.button {
+  // overrides that should be in reset/normalize
+  outline-style: none;
+  resize: none;
+  -webkit-appearance: none;
+  border: none;
+
+  display: block;
+  font-size: $em;
+  font-family: $button-font;
+  font-weight: bold;
+  background-color: $primary;
+  color: $darkest-color;
+  padding: $spacing*1.2 $spacing*3;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-align: center;
+  white-space: normal;
+  cursor: pointer;
+
+  @include rounded;
+  @include shadowed;
+  @include line;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $primary-light;
+  }
+
+  &:active {
+    background-color: $primary-dark;
+    @include depressed-shadow;
+  }
+
+  &.accent {
+    background-color: $accent;
+
+    &:hover {
+      background-color: $accent-light;
+    }
+
+    &:active {
+      background-color: $accent-dark;
+    }
+  }
+
+  &.accent-2 {
+    background-color: $accent-2;
+
+    &:hover {
+      background-color: $accent-2-light;
+    }
+
+    &:active {
+      background-color: $accent-2-dark;
+    }
+  }
+
+  &.neutral {
+    background-color: $neutral-50;
+
+    &:hover {
+      background-color: $neutral-40;
+    }
+
+    &:active {
+      background-color: $neutral-60;
+    }
+  }
+
+  &.info {
+    background-color: $info;
+    color: $neutral-10;
+
+    &:hover {
+      background-color: $info-light;
+    }
+
+    &:active {
+      background-color: $info-dark;
+    }
+  }
+
+  &.info-2 {
+    background-color: $info-2;
+    color: $neutral-10;
+
+    &:hover {
+      background-color: $info-2-light;
+    }
+
+    &:active {
+      background-color: $info-2-dark;
+    }
+  }
+
+  &.warn {
+    background-color: $warn;
+    color: $neutral-10;
+
+    &:hover {
+      background-color: $warn-light;
+    }
+
+    &:active {
+      background-color: $warn-dark;
+    }
+  }
+
+  &.error {
+    background-color: $error;
+
+    &:hover {
+      background-color: $error-light;
+    }
+
+    &:active {
+      background-color: $error-dark;
+    }
+  }
+
+  &.disabled {
+    @include opacity(0.3);
+  }
+}

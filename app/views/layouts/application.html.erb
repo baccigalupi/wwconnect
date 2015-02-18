@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Wwconnect</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>WWConnect - Women Who Connect</title>
+  <%= stylesheet_link_tag    'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id='page'>
+    <div id='header'>
+      <div class='inner'>
+        <div class='row logo'>
+          <h1 class='wwc'>WWC</h1>
+          <h1 class='connect'>Connect</h1>
+        </div>
+        <div class='row subtitle'>
+          <div class='block inner-left'>
+            <h2>Women Who Connect</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content" class='row'>
+      <%= yield %>
+    </div>
+  </div>
+  <div id='footer'>
+    <!-- some links here -->
+  </div>
 </body>
 </html>

@@ -1,0 +1,80 @@
+.input-container {
+  margin-top: $input-top-padding + $input-border-width + $shadow-padding/2;
+  margin-bottom: $input-top-padding;
+  margin-right: $input-side-padding $shadow-padding/2;
+  margin-left: $input-side-padding;
+}
+
+.input,
+input[type=text],
+input[type=password],
+input[type=email],
+textarea {
+  // overrides that should be in reset/normalize
+  outline-style: none;
+  resize: none;
+  -webkit-appearance: none;
+
+  @include line;
+  @include input-margin-fix;
+  @include border-radius;
+  @include bordered;
+  @include box-shadow(inset 0px $input-border-width-special $input-border-width-special $neutral-20);
+
+  background-color: $lightest-color;
+  font-size: $em;
+  color: $darkest-color;
+  padding: $input-top-padding  $input-side-padding;
+
+  &:focus {
+    @include focus-input-padding-fix;
+    border: $input-border-width-special solid $primary;
+    @include box-shadow(inset 0px $input-border-width-special*1.5 $input-border-width-special*1.5 $neutral-20);
+  }
+}
+
+input[type=checkbox] {
+  -webkit-appearance: checkbox;
+}
+input[type=radio] {
+  -webkit-appearance: radio;
+}
+
+textarea {
+  min-height: 100px;
+}
+@-moz-document url-prefix() {
+  textarea {
+    font-family: $body-font;
+  }
+}
+
+form {
+  .error-message {
+    display: none;
+  }
+
+  .error {
+    .error-message {
+      display: block;
+      color: $error-dark;
+    }
+
+    .file-input {
+      border: $input-border-width solid $error;
+    }
+
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    textarea {
+      border: $input-border-width-special solid $error;
+      @include focus-input-padding-fix;
+
+      &:focus {
+        @include focus-input-padding-fix;
+        border: $input-border-width-special solid $primary;
+      }
+    }
+  }
+}

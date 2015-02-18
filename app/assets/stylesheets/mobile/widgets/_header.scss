@@ -1,0 +1,29 @@
+#header {
+  background-color: $lightest-color;
+  @include box-shadow(black 0px 0.5px 10px);
+
+  height: 120px;
+
+  .logo {
+    height: 60px;
+
+    position: relative;
+
+    h1 {
+      font-size: 60px;
+
+      position: absolute;
+
+      &.wwc {
+        left: 0;
+        color: transparentize($primary, 0.3);
+      }
+      &.connect {
+        left: 132px;
+        color: transparentize($accent, 0.3);
+      }
+    }
+  }
+  .subtitle h2 { color: $neutral-60; }
+}
+
