@@ -94,19 +94,19 @@
 }
 
 .border-left {
-  border-left: $border-width solid $neutral-20;
+  border-left: $border-width solid $neutral-80;
 }
 
 .border-right {
-  border-right: $border-width solid $neutral-20;
+  border-right: $border-width solid $neutral-80;
 }
 
 .border-top {
-  border-top: $border-width solid $neutral-20;
+  border-top: $border-width solid $neutral-80;
 }
 
 .border-bottom {
-  border-bottom: $border-width solid $neutral-20;
+  border-bottom: $border-width solid $neutral-80;
 }
 
 .no-border {
@@ -147,72 +147,72 @@
 
 // colored text
 
-.light-text {
-  color: $neutral-20;
-}
+/*.light-text {*/
+  /*color: $neutral-20;*/
+/*}*/
 
-.primary-text {
-  color: $primary;
-}
+/*.primary-text {*/
+  /*color: $primary;*/
+/*}*/
 
-.accent-text {
-  color: $accent;
-}
+/*.accent-text {*/
+  /*color: $accent;*/
+/*}*/
 
-.accent-2-text {
-  color: $accent-2;
-}
+/*.accent-2-text {*/
+  /*color: $accent-2;*/
+/*}*/
 
-.info-text {
-  color: $info;
-}
+/*.info-text {*/
+  /*color: $info;*/
+/*}*/
 
-.info-2-text {
-  color: $info-2;
-}
+/*.info-2-text {*/
+  /*color: $info-2;*/
+/*}*/
 
-.warn-text {
-  color: $warn;
-}
+/*.warn-text {*/
+  /*color: $warn;*/
+/*}*/
 
-.error-text {
-  color: $error-dark;
-}
+/*.error-text {*/
+  /*color: $error-dark;*/
+/*}*/
 
 
-// colored backgrounds
-.background-light {
-  background-color: $lightest-color;
-}
+/*// colored backgrounds*/
+/*.background-light {*/
+  /*background-color: $lightest-color;*/
+/*}*/
 
-.background-dark {
-  background-color: $darkest-color;
-}
+/*.background-dark {*/
+  /*background-color: $darkest-color;*/
+/*}*/
 
-.background-primary {
-  background-color: $primary;
-}
+/*.background-primary {*/
+  /*background-color: $primary;*/
+/*}*/
 
-.background-accent {
-  background-color: $accent;
-}
+/*.background-accent {*/
+  /*background-color: $accent;*/
+/*}*/
 
-.background-accent-2 {
-  background-color: $accent-2;
-}
+/*.background-accent-2 {*/
+  /*background-color: $accent-2;*/
+/*}*/
 
-.background-info {
-  background-color: $info;
-}
+/*.background-info {*/
+  /*background-color: $info;*/
+/*}*/
 
-.background-info-2 {
-  background-color: $info-2;
-}
+/*.background-info-2 {*/
+  /*background-color: $info-2;*/
+/*}*/
 
-.background-warn {
-  background-color: $warn;
-}
+/*.background-warn {*/
+  /*background-color: $warn;*/
+/*}*/
 
-.background-error {
-  background-color: $error;
-}
+/*.background-error {*/
+  /*background-color: $error;*/
+/*}*/

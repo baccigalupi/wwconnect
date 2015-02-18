@@ -1,0 +1,65 @@
+@import "../shipd-variables";
+
+#content {
+  background-color: $darkest-color;
+  color: $neutral-20;
+}
+
+.panel {
+  .inner {
+    padding: $spacing*2;
+    background-color: transparentize($lightest-color, 0.9);
+    border: 1px solid $neutral-80;
+  }
+}
+
+$button-primary-color: lighten($primary, 10%);
+$button-accent-color: desaturate(lighten($accent, 15%), 40%);
+
+.arrow {
+  font-size: 100px;
+  &.primary { color: $button-primary-color; }
+  &.accent  { color: $button-accent-color; }
+}
+
+.spacer.big {
+  padding-top: $spacing*2;
+}
+
+.button.connect {
+  margin-top: $spacing*1.5;
+  @include border-radius(40px);
+  padding: $spacing;
+
+  &.primary {
+    background-color: $button-primary-color;
+
+    &:hover {
+      background-color: lighten($button-primary-color, 5%);
+    }
+    &:active {
+      background-color: darken($button-primary-color, 5%);
+    }
+  }
+
+  &.accent {
+    background-color: $button-accent-color;
+
+    &:hover {
+      background-color: lighten($button-accent-color, 5%);
+    }
+    &:active {
+      background-color: darken($button-accent-color, 5%);
+    }
+  }
+
+  .content {
+    @include border-radius(40px);
+    background-color: $lightest-color;
+    padding-top: $spacing/2;
+
+    .spacer {
+      width: $spacing * 2.5;
+    }
+  }
+}

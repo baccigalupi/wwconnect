@@ -1,0 +1,17 @@
+.arrow {
+  font-size: 100px;
+}
+
+.button.connect {
+  h3 {
+    font-size: 1.1*$em;
+    padding-top: 3px;
+  }
+  .content {
+    .spacer { width: $spacing; }
+  }
+}
+
+.arrow {
+  margin-top: 0;
+}

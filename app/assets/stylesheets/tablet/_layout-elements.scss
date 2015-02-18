@@ -1,8 +1,12 @@
-#page {
-  max-width: $tablet-break-point - $spacing*2;
+#page,
+#footer {
+  max-width: $tablet-break-point + $spacing*2;
   margin: 0 auto;
+}
+#page {
   @include box-shadow($darkest-color 0 0 $spacing*2)
 }
+
 
 #header {
   height: 160px;

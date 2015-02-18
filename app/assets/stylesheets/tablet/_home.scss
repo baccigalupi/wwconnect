@@ -1,0 +1,16 @@
+@import "variables";
+
+.arrow {
+  font-size: 60px;
+ }
+
+.button.connect {
+  h3 { font-size: 1.1*$em }
+  .content {
+    .spacer { width: $spacing/2; }
+  }
+}
+
+.arrow {
+  margin-top: $spacing;
+}

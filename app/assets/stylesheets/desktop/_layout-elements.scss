@@ -1,5 +1,9 @@
-#page {
+#page,
+#footer {
   max-width: $desktop-break-point + 64px; // gets this to 1024 even though breakpoint is smaller
+}
+
+#page {
   @include box-shadow($darkest-color 0 0 $spacing*2);
 }
 
