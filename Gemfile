@@ -11,6 +11,8 @@ gem 'thin' # TODO: upgrade to Puma?
 gem 'omniauth'
 gem 'omniauth-linkedin'
 
+gem 'envar'
+
 group :production do
   gem 'rails_12factor'
 end
