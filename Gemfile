@@ -11,7 +11,9 @@ gem 'thin' # TODO: upgrade to Puma?
 gem 'omniauth'
 gem 'omniauth-linkedin'
 
-
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'byebug'
