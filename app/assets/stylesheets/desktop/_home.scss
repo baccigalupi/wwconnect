@@ -3,9 +3,10 @@
 }
 
 .button.connect {
+  margin-top: $spacing;
   h3 {
-    font-size: 1.1*$em;
-    padding-top: 3px;
+    font-size: 1.3*$em;
+    padding-top: 1px;
   }
   .content {
     .spacer { width: $spacing; }

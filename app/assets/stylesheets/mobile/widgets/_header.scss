@@ -10,7 +10,7 @@
     position: relative;
 
     h1 {
-      font-size: 60px;
+      font-size: 48px;
 
       position: absolute;
 
@@ -19,11 +19,14 @@
         color: transparentize($primary, 0.3);
       }
       &.connect {
-        left: 132px;
+        left: 105px;
         color: transparentize($accent, 0.3);
       }
     }
   }
-  .subtitle h2 { color: $neutral-60; }
+  .subtitle h2 {
+    color: $neutral-60;
+    font-size: 25px;
+  }
 }
 

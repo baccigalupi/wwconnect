@@ -17,7 +17,8 @@ $button-primary-color: lighten($primary, 10%);
 $button-accent-color: desaturate(lighten($accent, 15%), 40%);
 
 .arrow {
-  font-size: 100px;
+  font-size: 60px;
+  margin-top: 20px;
   &.primary { color: $button-primary-color; }
   &.accent  { color: $button-accent-color; }
 }
@@ -29,7 +30,9 @@ $button-accent-color: desaturate(lighten($accent, 15%), 40%);
 .button.connect {
   margin-top: $spacing*1.5;
   @include border-radius(40px);
-  padding: $spacing;
+  padding: $spacing*2/3;
+
+  h3 { font-size: 1.1*$em }
 
   &.primary {
     background-color: $button-primary-color;

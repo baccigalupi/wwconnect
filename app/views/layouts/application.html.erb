@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WWConnect - Women Who Connect</title>
+<title>WWConnect - Women Who Connect</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1">
+  <link href="/favicon.ico" rel="shortcut icon" type="image/ico">
   <%= stylesheet_link_tag    'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -28,10 +31,12 @@
   </div>
   <div id='footer'>
     <div class='inner'>
-      <div class='unit'>&copy; WWConnect<%= Time.now.year %></div>
-      <div class='unit'><div class='inner-left inner-right'>|</div></div>
+      <div class='unit m-row'>&copy; WWConnect<%= Time.now.year %></div>
+      <div class='unit'>
+        <div class='m-hidden inner-left inner-right'>|</div>
+      </div>
       <!-- TODO: change contact, and add more WWC stuff -->
-      <div class='unit'><a href='mailto:kane@shipd.io'>Contact Us</a></div>
+      <div class='unit m-row'><a href='mailto:kane@shipd.io'>Contact Us</a></div>
     </div>
   </div>
 </body>
