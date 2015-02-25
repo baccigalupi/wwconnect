@@ -1,4 +1,9 @@
 class AuthenticationsController < ApplicationController
+  def new
+    session[:role] = params[:role]
+    redirect_to "/auth/linkedin"
+  end
+
   def create
     updater_class = session[:role] == 'recruiter' ? RecruiterUpdater : MemberUpdater
     updater = updater_class.new(request.env['omniauth.auth'])

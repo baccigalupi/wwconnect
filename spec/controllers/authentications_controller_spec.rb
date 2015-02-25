@@ -1,6 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe AuthenticationsController, type: :controller do
+  describe '#new' do
+    it "redirects to 'auth/linkedin'" do
+      get :new, role: Roles::MEMBER
+      expect(controller).to redirect_to("/auth/linkedin")
+    end
+
+    it "stores the role in the session" do
+      get :new, role: Roles::RECRUITER
+      expect(session[:role]).to eq(Roles::RECRUITER)
+    end
+  end
+
   describe "#create" do
     let(:updater) { double('updater', perform: true, user: user) }
     let(:user) { double('user', id: 1234, primary_role: role) }
