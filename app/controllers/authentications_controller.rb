@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class AuthenticationsController < ApplicationController
   def create
     updater_class = session[:role] == 'recruiter' ? RecruiterUpdater : MemberUpdater
     updater = updater_class.new(request.env['omniauth.auth'])

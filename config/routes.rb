@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'home#index'
 
-   resources :users
-   get '/auth/:provider/callback', to: 'users#update'
+   resources :authentications, only: [:new, :create]
+   get '/auth/:provider/callback', to: 'authentications#create'
+   get '/auth/new', to: 'authentications#new'
 
 
   # Example of regular route:

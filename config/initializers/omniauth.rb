@@ -1,5 +1,6 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :linkedin,
-    Rails.application.secrets.linkedin_consumer_key,
-    Rails.application.secrets.linkedin_consumer_secret
+    Envar.linkedin_consumer_key,
+    Envar.linkedin_consumer_secret,
+    scope: 'r_fullprofile r_emailaddress r_network'
 end

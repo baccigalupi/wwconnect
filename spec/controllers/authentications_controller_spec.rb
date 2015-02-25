@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :controller do
+RSpec.describe AuthenticationsController, type: :controller do
   describe "#create" do
     let(:updater) { double('updater', perform: true, user: user) }
     let(:user) { double('user', id: 1234, primary_role: role) }
