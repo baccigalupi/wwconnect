@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe AuthenticationUpdater do
   let(:updater) { AuthenticationUpdater.new(data, role) }
   let(:data) { OmniAuth::AuthHash.new(sample_linkedin_data) }
-  let(:role) { Roles::RECRUITER }
+  let(:role) { Role::RECRUITER }
 
   let(:authentication) { updater.authentication }
 
@@ -16,7 +16,7 @@ RSpec.describe AuthenticationUpdater do
       let(:role) { nil }
 
       it "should be 'member'" do
-        expect(updater.role).to eq(Roles::MEMBER)
+        expect(updater.role).to eq(Role::MEMBER)
       end
     end
 
@@ -24,7 +24,7 @@ RSpec.describe AuthenticationUpdater do
       let(:role) { 'admin' }
 
       it "should be 'member'" do
-        expect(updater.role).to eq(Roles::MEMBER)
+        expect(updater.role).to eq(Role::MEMBER)
       end
     end
   end
@@ -57,7 +57,7 @@ RSpec.describe AuthenticationUpdater do
       context 'when it matches on uid' do
         before do
           auth = Authentication.create(uid: data.uid, email: 'email')
-          auth.roles.create(type: Roles::MEMBER)
+          auth.roles.create(type: Role::MEMBER)
         end
 
         it "does not create a new authentication" do
@@ -76,14 +76,14 @@ RSpec.describe AuthenticationUpdater do
 
         it "adds new roles" do
           updater.perform
-          expect(authentication.roles.map(&:type)).to include(Roles::MEMBER, Roles::RECRUITER)
+          expect(authentication.roles.map(&:type)).to include(Role::MEMBER, Role::RECRUITER)
         end
       end
 
       context 'when it matches on email' do
         before do
           auth = Authentication.create(email: data.info.email, uid: 'uid')
-          auth.roles.create(type: Roles::RECRUITER)
+          auth.roles.create(type: Role::RECRUITER)
         end
 
         it "does not create a new authentication" do

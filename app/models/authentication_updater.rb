@@ -6,7 +6,7 @@ class AuthenticationUpdater < Struct.new(:data, :param_role)
   end
 
   def role
-    Roles.valid?(param_role) ? param_role : Roles::MEMBER
+    Role.valid?(param_role) ? param_role : Role::MEMBER
   end
 
   def authentication

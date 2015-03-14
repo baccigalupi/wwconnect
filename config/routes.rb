@@ -9,7 +9,13 @@ Rails.application.routes.draw do
    get '/auth/:provider/callback', to: 'authentications#create'
    get '/auth/new', to: 'authentications#new'
 
+   resources :members do
+     resources :jobs, controller: 'members/jobs'
+   end
 
+   resources :recruiters do
+     resources :jobs, controller: 'recruiters/jobs'
+   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

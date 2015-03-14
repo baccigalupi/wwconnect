@@ -3,20 +3,20 @@ require 'rails_helper'
 RSpec.describe AuthenticationsController, type: :controller do
   describe '#new' do
     it "redirects to 'auth/linkedin'" do
-      get :new, role: Roles::MEMBER
+      get :new, role: Role::MEMBER
       expect(controller).to redirect_to("/auth/linkedin")
     end
 
     it "stores the role in the session" do
-      get :new, role: Roles::RECRUITER
-      expect(session[:role]).to eq(Roles::RECRUITER)
+      get :new, role: Role::RECRUITER
+      expect(session[:role]).to eq(Role::RECRUITER)
     end
   end
 
   describe "#create" do
     let(:updater) { double('updater', perform: true, authentication: authentication) }
     let(:authentication) { double('authentication', id: 1234, primary_role: role) }
-    let(:role) { Roles::MEMBER }
+    let(:role) { Role::MEMBER }
 
     before do
       request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:linkedin]
@@ -41,12 +41,12 @@ RSpec.describe AuthenticationsController, type: :controller do
 
       it "redirects to the member jobs page" do
         post :create
-        expect(controller).to redirect_to("/member/jobs")
+        expect(controller).to redirect_to("/members/1234/jobs")
       end
     end
 
     context 'when the session shows they are an recruiter' do
-      let(:role) { Roles::RECRUITER }
+      let(:role) { Role::RECRUITER }
 
       before do
         session[:role] = role
@@ -74,7 +74,7 @@ RSpec.describe AuthenticationsController, type: :controller do
 
       before do
         session[:role] = role
-        allow(authentication).to receive(:primary_role).and_return(Roles::MEMBER)
+        allow(authentication).to receive(:primary_role).and_return(Role::MEMBER)
       end
 
       it "passes the oauth data to the AuthenticationUpdater" do
@@ -90,7 +90,7 @@ RSpec.describe AuthenticationsController, type: :controller do
 
       it "redirects to the member jobs page" do
         post :create
-        expect(controller).to redirect_to("/member/jobs")
+        expect(controller).to redirect_to("/members/1234/jobs")
       end
     end
 

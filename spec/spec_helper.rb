@@ -16,7 +16,6 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require_relative "../app/models/roles"
 require_relative "../app/models/paths"
 
 

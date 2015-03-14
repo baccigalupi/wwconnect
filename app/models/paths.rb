@@ -1,30 +1,30 @@
-class Paths < Struct.new(:user)
+class Paths < Struct.new(:authentication)
   extend Forwardable
 
   def role_path_class
-    return NullPaths unless user
-    user.primary_role == Roles::RECRUITER ? RecruiterPaths : MemberPaths
+    return NullPaths unless authentication
+    authentication.primary_role == Role::RECRUITER ? RecruiterPaths : MemberPaths
   end
 
   def role_related_paths
-    @role_related_paths ||= role_path_class.new(user)
+    @role_related_paths ||= role_path_class.new(authentication)
   end
 
   def_delegators :role_related_paths, :home
 
-  class MemberPaths < Struct.new(:user)
+  class MemberPaths < Struct.new(:authentication)
     def home
-      "/member/jobs"
+      "/members/#{authentication.id}/jobs"
     end
   end
 
-  class RecruiterPaths < Struct.new(:user)
+  class RecruiterPaths < Struct.new(:authentication)
     def home
-      "/recruiters/#{user.id}/jobs"
+      "/recruiters/#{authentication.id}/jobs"
     end
   end
 
-  class NullPaths < Struct.new(:user)
+  class NullPaths < Struct.new(:authentication)
     def home
       "/"
     end
