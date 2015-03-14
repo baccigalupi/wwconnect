@@ -1,3 +1,0 @@
-class RecruiterUpdater
-  
-end

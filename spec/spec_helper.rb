@@ -18,8 +18,6 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require_relative "../app/models/roles"
 require_relative "../app/models/paths"
-require_relative "../app/models/member_updater"
-require_relative "../app/models/recruiter_updater"
 
 
 RSpec.configure do |config|

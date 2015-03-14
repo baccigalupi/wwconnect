@@ -1,3 +1,0 @@
-class MemberUpdater
-  
-end

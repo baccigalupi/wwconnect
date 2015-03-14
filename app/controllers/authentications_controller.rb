@@ -5,10 +5,9 @@ class AuthenticationsController < ApplicationController
   end
 
   def create
-    updater_class = session[:role] == 'recruiter' ? RecruiterUpdater : MemberUpdater
-    updater = updater_class.new(request.env['omniauth.auth'])
+    updater = AuthenticationUpdater.new(request.env['omniauth.auth'], session[:role])
     updater.perform
-    sign_in(updater.user)
-    redirect_to Paths.new(updater.user).home
+    sign_in(updater.authentication)
+    redirect_to Paths.new(updater.authentication).home
   end
 end
