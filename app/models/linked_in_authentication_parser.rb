@@ -7,9 +7,14 @@ class LinkedInAuthenticationParser
   end
 
   def normalize_data
-    oauth_data.info ||= Hashie::Mash.new
-    oauth_data.info.location ||= Hashie::Mash.new
-    oauth_data.info.urls ||= Hashie::Mash.new
+    oauth_data.info           ||= null_data
+    oauth_data.info.location  ||= null_data
+    oauth_data.info.urls      ||= null_data
+    oauth_data.credentials    ||= null_data
+  end
+
+  def null_data
+    Hashie::Mash.new
   end
 
   def attrs
@@ -22,7 +27,14 @@ class LinkedInAuthenticationParser
       title:        oauth_data.info.description,
       location:     oauth_data.info.location.name,
       image:        oauth_data.info.image,
-      linkedin_url: oauth_data.info.urls.public_profile
+      linkedin_url: oauth_data.info.urls.public_profile,
+      token:        oauth_data.credentials.token,
+      expires_at:   expires_at
     }
+  end
+
+  def expires_at
+    return unless oauth_data.credentials.expires_at
+    Time.at(oauth_data.credentials.expires_at)
   end
 end

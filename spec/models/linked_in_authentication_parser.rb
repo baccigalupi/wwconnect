@@ -14,14 +14,17 @@ RSpec.describe LinkedInAuthenticationParser do
       title:        'Coder, Teacher, Fixer',
       location:     'San Francisco Bay Area',
       image:        "https://media.licdn.com/mpr/mprx/0_SmdaAVHwq-PXHQ3gfuVjAMoVNthWHLKg72jlAMwVwBqZcTbj3eJGxJ0qsp8BwGlluSIrOOJH9d5n",
-      linkedin_url: "https://www.linkedin.com/pub/kane-baccigalupi/7/29b/916"
+      linkedin_url: "https://www.linkedin.com/pub/kane-baccigalupi/7/29b/916",
+      token:        'token',
+      expires_at:   DateTime.parse('2015-04-26 01:52:26 UTC')
     })
   end
 
   context 'when nested data is not present' do
-    let(:data) { 
+    let(:data) {
       d = OmniAuth::AuthHash.new(sample_linkedin_data)
       d.delete(:info)
+      d.delete(:credentials)
       d
     }
 

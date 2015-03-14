@@ -19,7 +19,7 @@ def sample_linkedin_data
       }
     },
     "credentials"=>{
-      "token"=>"token-PGD4l--M_cPxZ3BoYu3ytbv7MAeci5UrDGo6T0oNaNNP4PEqA2M0glzym7eDM9zCzoUYMmqTPqCY58cLnEPU00OPRm21ahBEQ", "expires_at"=>1430013146, "expires"=>true
+      "token"=>"token", "expires_at"=>1430013146, "expires"=>true
     },
     "extra"=>{
       "raw_info"=>{

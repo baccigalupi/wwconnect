@@ -18,10 +18,12 @@ ActiveRecord::Schema.define(version: 20150227183950) do
 
   create_table "authentications", force: :cascade do |t|
     t.string   "uid",          null: false
+    t.string   "email",        null: false
     t.string   "provider"
+    t.string   "token"
+    t.datetime "expires_at"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "email",        null: false
     t.string   "title"
     t.string   "location"
     t.string   "image"
